@@ -18,18 +18,15 @@ public class Start
     private JLabel mBtnClose;
     private JLabel mLabelChart;
     private JTextField mFieldEmail;
+    private JPasswordField mFieldPassword;
+    private JButton mBtnRegistration;
+    private JButton mBtnLogin;
+    private JFrame frame;
 
     public Start()
     {
         mFieldEmail.setBorder(javax.swing.BorderFactory.createEmptyBorder());
-        mBtnClose.addMouseListener(new MouseAdapter()
-        {
-            @Override
-            public void mouseClicked(MouseEvent e)
-            {
-                System.exit(0);
-            }
-        });
+        mFieldPassword.setBorder(javax.swing.BorderFactory.createEmptyBorder());
         mFieldEmail.addFocusListener(new FocusAdapter()
         {
             @Override
@@ -50,15 +47,56 @@ public class Start
                 }
             }
         });
+        mFieldPassword.addFocusListener(new FocusAdapter()
+        {
+            @Override
+            public void focusGained(FocusEvent e)
+            {
+                if(String.valueOf(mFieldPassword.getPassword()).equals("Enter password"))
+                {
+                    mFieldPassword.setText("");
+                }
+            }
+
+            @Override
+            public void focusLost(FocusEvent e)
+            {
+                if(String.valueOf(mFieldPassword.getPassword()).isEmpty())
+                {
+                    mFieldPassword.setText("Enter password");
+                }
+            }
+        });
+        mBtnLogin.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                //Скрываю окно "Старт"
+                frame.setVisible(false);
+
+                //Отобразаю "Главное окно программы"
+                JFrame frame = new JFrame();
+                frame.setContentPane(new Home().getmHomePanel());
+                frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+                frame.setLocation(300, 100);
+                frame.pack();
+                frame.setVisible(true);
+            }
+        });
     }
 
     public static void main(String[] args)
     {
-        JFrame frame = new JFrame();
-        frame.setContentPane(new Start().mPanelStart);
-        frame.setLocation(350, 50);
-        frame.setUndecorated(true);
-        frame.pack();
-        frame.setVisible(true);
+        Start start = new Start();
+        start.frame = new JFrame();
+        start.frame.setContentPane(start.mPanelStart);
+        start.frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        //Меняю иконку приложения
+        start.frame.setIconImage(Toolkit.getDefaultToolkit().getImage("com/evvisoft/images/logo.png"));
+        start.frame.setLocation(300, 100);
+//        frame.setUndecorated(true);
+        start.frame.pack();
+        start.frame.setVisible(true);
     }
 }
