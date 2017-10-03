@@ -28,15 +28,19 @@
           </component>
         </children>
       </grid>
-      <grid id="21b31" binding="mJPanelRoot" layout-manager="BorderLayout" hgap="0" vgap="0">
+      <grid id="21b31" binding="mJPanelRoot" layout-manager="GridLayoutManager" row-count="2" column-count="6" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
         <constraints border-constraint="Center"/>
         <properties>
           <background color="-16611119"/>
         </properties>
         <border type="none"/>
         <children>
-          <grid id="a42c" binding="mJPanelLeft" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="1">
-            <constraints border-constraint="West"/>
+          <grid id="a42c" binding="mJPanelLeft" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="0" vgap="0">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
             <properties>
               <background color="-1"/>
             </properties>
@@ -44,7 +48,9 @@
             <children>
               <grid id="21000" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
-                <constraints/>
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
                 <properties>
                   <background color="-16611119"/>
                 </properties>
@@ -52,7 +58,7 @@
                 <children>
                   <component id="dc217" class="javax.swing.JLabel">
                     <constraints>
-                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="20" use-parent-layout="false"/>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
                       <background color="-16611119"/>
@@ -60,23 +66,123 @@
                       <foreground color="-1"/>
                       <horizontalAlignment value="0"/>
                       <horizontalTextPosition value="0"/>
-                      <text value="МЕНЕДЖЕР                    "/>
+                      <text value="МЕНЕДЖЕР"/>
                     </properties>
                   </component>
                 </children>
               </grid>
             </children>
           </grid>
-          <grid id="5caf3" binding="mJPanelCenter" layout-manager="BorderLayout" hgap="0" vgap="0">
-            <constraints border-constraint="Center"/>
+          <grid id="5caf3" binding="mJPanelCenter" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="434" height="28"/>
+              </grid>
+            </constraints>
             <properties>
               <background color="-1"/>
               <font name="Consolas" size="18"/>
             </properties>
             <border type="none"/>
             <children>
-              <component id="8c536" class="javax.swing.JLabel">
-                <constraints border-constraint="North"/>
+              <grid id="64c86" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <autoscrolls value="true"/>
+                  <background color="-1"/>
+                  <preferredSize width="10" height="10"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <scrollpane id="2ccff">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <autoscrolls value="true"/>
+                      <background color="-1"/>
+                      <foreground color="-1"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="3643c" class="javax.swing.JTextArea" binding="mTextAreaCenter">
+                        <constraints/>
+                        <properties>
+                          <background color="-1"/>
+                          <columns value="0"/>
+                          <foreground color="-16777216"/>
+                          <minimumSize width="17" height="17"/>
+                          <preferredSize width="700" height="1700"/>
+                          <rows value="0"/>
+                          <text value="Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст "/>
+                          <wrapStyleWord value="true"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </scrollpane>
+                </children>
+              </grid>
+            </children>
+          </grid>
+          <grid id="e7279" binding="mJPanelRight" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="0" column="3" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-1"/>
+            </properties>
+            <border type="line"/>
+            <children>
+              <grid id="22cf3" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-16611119"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="2155a" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-16611119"/>
+                      <font name="Consolas" size="18"/>
+                      <foreground color="-1"/>
+                      <horizontalAlignment value="0"/>
+                      <horizontalTextPosition value="0"/>
+                      <text value="КЛИЕНТ"/>
+                      <verticalAlignment value="0"/>
+                      <verticalTextPosition value="0"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+            </children>
+          </grid>
+          <grid id="6667e" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="434" height="26"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-1"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="ca46d" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
                 <properties>
                   <background color="-1"/>
                   <font name="Consolas" size="18" style="1"/>
@@ -88,74 +194,30 @@
                   <verticalTextPosition value="0"/>
                 </properties>
               </component>
-              <grid id="64c86" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
-                <constraints border-constraint="Center"/>
-                <properties>
-                  <autoscrolls value="true"/>
-                  <background color="-1"/>
-                  <preferredSize width="10" height="10"/>
-                </properties>
-                <border type="none"/>
-                <children>
-                  <scrollpane id="2ccff">
-                    <constraints/>
-                    <properties>
-                      <autoscrolls value="true"/>
-                      <background color="-1"/>
-                      <foreground color="-1"/>
-                    </properties>
-                    <border type="none"/>
-                    <children>
-                      <component id="3643c" class="javax.swing.JTextArea" binding="mTextAreaCenter">
-                        <constraints/>
-                        <properties>
-                          <columns value="50"/>
-                          <minimumSize width="17" height="17"/>
-                          <preferredSize width="700" height="1700"/>
-                          <rows value="50"/>
-                          <text value="Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст Какойто текст какойто текст "/>
-                          <wrapStyleWord value="true"/>
-                        </properties>
-                      </component>
-                    </children>
-                  </scrollpane>
-                </children>
-              </grid>
             </children>
           </grid>
-          <grid id="e7279" binding="mJPanelRight" layout-manager="FlowLayout" hgap="0" vgap="0" flow-align="1">
-            <constraints border-constraint="East"/>
-            <properties>
-              <background color="-1"/>
-            </properties>
-            <border type="line"/>
-            <children>
-              <grid id="22cf3" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-                <margin top="0" left="0" bottom="0" right="0"/>
-                <constraints/>
-                <properties>
-                  <background color="-16611119"/>
-                </properties>
-                <border type="none"/>
-                <children>
-                  <component id="2155a" class="javax.swing.JLabel">
-                    <constraints>
-                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="22" use-parent-layout="false"/>
-                    </constraints>
-                    <properties>
-                      <background color="-16611119"/>
-                      <font name="Consolas" size="18"/>
-                      <foreground color="-1"/>
-                      <horizontalAlignment value="0"/>
-                      <horizontalTextPosition value="0"/>
-                      <text value="КЛИЕНТ                    "/>
-                      <verticalAlignment value="0"/>
-                      <verticalTextPosition value="0"/>
-                    </properties>
-                  </component>
-                </children>
-              </grid>
-            </children>
+          <vspacer id="442c3">
+            <constraints>
+              <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <grid id="a16e8" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children/>
+          </grid>
+          <grid id="412fe" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children/>
           </grid>
         </children>
       </grid>
