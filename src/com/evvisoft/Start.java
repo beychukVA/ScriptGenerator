@@ -7,6 +7,8 @@ import java.awt.event.FocusEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+import static java.awt.Frame.MAXIMIZED_BOTH;
+
 /**
  * Окно Решистрации/Входа в программу
  */
@@ -80,8 +82,10 @@ public class Start
                 frame.setContentPane(new Home().getmHomePanel());
                 frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
                 frame.setLocation(300, 100);
+                frame.setResizable(false);
                 frame.pack();
                 frame.setVisible(true);
+                frame.setExtendedState(MAXIMIZED_BOTH);
             }
         });
     }

@@ -7,12 +7,19 @@ public class Home
 {
 
     private JPanel mHomePanel;
-    private JPanel mMenuPanel;
-    private JLabel mMenuFile;
+    private JPanel mJPanelMenu;
+    private JPanel mJPanelRoot;
+    private JPanel mJPanelLeft;
+    private JPanel mJPanelCenter;
+    private JButton button1;
+    private JPanel mJPanelRight;
+    private JTextArea mTextAreaCenter;
 
     public Home()
     {
-
+        // Параметры переноса слов
+        mTextAreaCenter.setLineWrap(true);
+        mTextAreaCenter.setWrapStyleWord(true);
     }
 
     public JPanel getmHomePanel() {
