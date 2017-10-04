@@ -14,21 +14,43 @@
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints border-constraint="North"/>
         <properties>
-          <background color="-1"/>
+          <background color="-3487030"/>
         </properties>
         <border type="none"/>
         <children>
-          <component id="e96e3" class="javax.swing.JButton" binding="button1" default-binding="true">
+          <grid id="b3a28" binding="mJPanelEditAndLook" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="4" fill="2" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Button"/>
+              <background color="-3487030"/>
+              <foreground color="-1"/>
             </properties>
-          </component>
+            <border type="none"/>
+            <children>
+              <component id="e96e3" class="javax.swing.JButton" binding="mBtnEdit">
+                <constraints/>
+                <properties>
+                  <background color="-14772430"/>
+                  <focusable value="false"/>
+                  <foreground color="-1"/>
+                  <text value="Редактировать"/>
+                </properties>
+              </component>
+              <component id="37fbe" class="javax.swing.JButton" binding="mBtnLoook">
+                <constraints/>
+                <properties>
+                  <background color="-14772430"/>
+                  <focusable value="false"/>
+                  <foreground color="-1"/>
+                  <text value="Просмотр"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
         </children>
       </grid>
-      <grid id="21b31" binding="mJPanelRoot" layout-manager="GridLayoutManager" row-count="2" column-count="6" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="21b31" binding="mJPanelRoot" layout-manager="GridLayoutManager" row-count="3" column-count="6" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints border-constraint="Center"/>
         <properties>
@@ -76,7 +98,7 @@
           <grid id="5caf3" binding="mJPanelCenter" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
-              <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+              <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
                 <preferred-size width="434" height="28"/>
               </grid>
             </constraints>
@@ -167,7 +189,7 @@
               </grid>
             </children>
           </grid>
-          <grid id="6667e" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="6667e" binding="mJPanelQuestionTitle" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
               <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
@@ -177,7 +199,9 @@
             <properties>
               <background color="-1"/>
             </properties>
-            <border type="none"/>
+            <border type="line">
+              <color color="-16777216"/>
+            </border>
             <children>
               <component id="ca46d" class="javax.swing.JLabel">
                 <constraints>
@@ -198,27 +222,74 @@
           </grid>
           <vspacer id="442c3">
             <constraints>
-              <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+              <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
             </constraints>
           </vspacer>
-          <grid id="a16e8" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="a16e8" binding="mJPanelManager" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
-              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-1"/>
+            </properties>
             <border type="none"/>
-            <children/>
+            <children>
+              <scrollpane id="bfa8c" binding="mJScrollPaneQuestionsManager">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-1"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <grid id="e5356" binding="mJPanelQuestionManagerContent" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints/>
+                    <properties>
+                      <background color="-1"/>
+                    </properties>
+                    <border type="none">
+                      <color color="-16777216"/>
+                    </border>
+                    <children/>
+                  </grid>
+                </children>
+              </scrollpane>
+            </children>
           </grid>
-          <grid id="412fe" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="412fe" binding="mJPanelClient" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
-              <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-1"/>
+            </properties>
             <border type="none"/>
-            <children/>
+            <children>
+              <vspacer id="2d591">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
+            </children>
           </grid>
+          <component id="c5179" class="javax.swing.JButton" binding="mBtnNewGroupQuestionManager">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="5" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-14772430"/>
+              <focusable value="false"/>
+              <foreground color="-1"/>
+              <icon value="com/evvisoft/images/plus.png"/>
+              <margin top="0" left="0" bottom="0" right="0"/>
+              <text value="Группа ответов"/>
+              <verticalAlignment value="1"/>
+            </properties>
+          </component>
         </children>
       </grid>
     </children>

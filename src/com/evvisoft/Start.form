@@ -203,6 +203,7 @@
                 <properties>
                   <background color="-16611119"/>
                   <borderPainted value="true"/>
+                  <focusable value="false"/>
                   <foreground color="-1"/>
                   <iconTextGap value="0"/>
                   <margin top="5" left="14" bottom="5" right="14"/>
@@ -214,6 +215,7 @@
                 <properties>
                   <background color="-16611119"/>
                   <borderPainted value="true"/>
+                  <focusable value="false"/>
                   <foreground color="-1"/>
                   <iconTextGap value="0"/>
                   <margin top="2" left="14" bottom="2" right="14"/>
