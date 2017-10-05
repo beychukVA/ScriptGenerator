@@ -1,5 +1,7 @@
 package com.evvisoft;
 
+import com.evvisoft.utill.VerticalLayout;
+
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import javax.swing.plaf.IconUIResource;
@@ -39,7 +41,7 @@ public class Home
             @Override
             public void mouseClicked(MouseEvent e)
             {
-                mJPanelQuestionManagerContent.setLayout(new BoxLayout(mJPanelQuestionManagerContent, BoxLayout.Y_AXIS));
+                mJPanelQuestionManagerContent.setLayout(new VerticalLayout());
                 mJPanelQuestionManagerContent.setAlignmentY(Component.TOP_ALIGNMENT);
 
                 //Карточка "Вопросы менеджера"
@@ -54,10 +56,28 @@ public class Home
                 //Кнопки
                 JButton btnEditCard = new JButton();
                 btnEditCard.setIcon(createIcon("images/pencil.png"));
-                btnEditCard.setText("Ответ");
+                btnEditCard.setOpaque(false);
+                btnEditCard.setContentAreaFilled(false);
+                btnEditCard.setBorderPainted(false);
                 panelEditAndRemove.add(btnEditCard);
+                JButton btnDeleteCard = new JButton();
+                btnDeleteCard.setIcon(createIcon("images/delete.png"));
+                btnDeleteCard.setOpaque(false);
+                btnDeleteCard.setContentAreaFilled(false);
+                btnDeleteCard.setBorderPainted(false);
+                panelEditAndRemove.add(btnDeleteCard);
+
+                //Название группы
+                JPanel panelQuestionGroupTitle = new JPanel();
+                panelQuestionGroupTitle.setLayout(new FlowLayout(FlowLayout.CENTER));
+                panelQuestionGroupTitle.setAlignmentX(Component.CENTER_ALIGNMENT);
+                //Название группы
+                JLabel questionGroupTitle = new JLabel("1. Первый звонок");
+                questionGroupTitle.setHorizontalAlignment(SwingConstants.CENTER);
+                panelQuestionGroupTitle.add(questionGroupTitle);
 
                 panelRoot.add(panelEditAndRemove);
+                panelRoot.add(panelQuestionGroupTitle);
 
                 mJPanelQuestionManagerContent.add(panelRoot);
                 mJScrollPaneQuestionsManager.revalidate();
