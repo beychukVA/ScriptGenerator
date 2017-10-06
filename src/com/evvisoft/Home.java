@@ -6,6 +6,8 @@ import javax.swing.*;
 import javax.swing.border.LineBorder;
 import javax.swing.plaf.IconUIResource;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.net.URL;
@@ -72,12 +74,44 @@ public class Home
                 panelQuestionGroupTitle.setLayout(new FlowLayout(FlowLayout.CENTER));
                 panelQuestionGroupTitle.setAlignmentX(Component.CENTER_ALIGNMENT);
                 //Название группы
-                JLabel questionGroupTitle = new JLabel("1. Первый звонок");
+                JLabel questionGroupTitle = new JLabel("Новая категория");
                 questionGroupTitle.setHorizontalAlignment(SwingConstants.CENTER);
                 panelQuestionGroupTitle.add(questionGroupTitle);
 
+                //------- Ответы ------------------------
+                JPanel panelQuestions = new JPanel();
+                panelQuestions.setLayout(new VerticalLayout());
+                panelQuestions.setBorder(new LineBorder(Color.GRAY));
+                //---------------------------------------
+
+                //Кнопка "Добавить ответ"
+                JPanel panelBtnAddNewQuestion = new JPanel();
+                panelBtnAddNewQuestion.setLayout(new FlowLayout(FlowLayout.RIGHT));
+                panelBtnAddNewQuestion.setAlignmentX(Component.CENTER_ALIGNMENT);
+                //Кнопка "Добавить"
+                JButton btnAddQuestion = new JButton();
+                btnAddQuestion.setIcon(createIcon("images/plus_bold.png"));
+                btnAddQuestion.setText("Ответ");
+                btnAddQuestion.setForeground(new Color(255, 255, 255));
+                btnAddQuestion.setFocusable(false);
+                btnAddQuestion.setBackground(new Color(30, 151, 50));
+                btnAddQuestion.addActionListener(e1 ->
+                {
+                    //Новый ответ
+                    JLabel newQuestion = new JLabel("Новый ответ");
+                    newQuestion.setHorizontalAlignment(SwingConstants.LEFT);
+                    panelQuestions.add(newQuestion);
+                    mJPanelQuestionManagerContent.updateUI();
+                    System.out.println("Количество ответов: " + panelQuestions.getComponents().length);
+                });
+                panelBtnAddNewQuestion.add(btnAddQuestion);
+
+
+
                 panelRoot.add(panelEditAndRemove);
                 panelRoot.add(panelQuestionGroupTitle);
+                panelRoot.add(panelQuestions);
+                panelRoot.add(panelBtnAddNewQuestion);
 
                 mJPanelQuestionManagerContent.add(panelRoot);
                 mJScrollPaneQuestionsManager.revalidate();

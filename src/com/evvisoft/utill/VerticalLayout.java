@@ -5,26 +5,26 @@ import java.awt.*;
 
 public class VerticalLayout implements LayoutManager
 {
-        // отступ между компонентами
-        public int GAP = 5;
-        // сигнал расположить компоненты в контейнере
-        public void layoutContainer(Container c)
+    // отступ между компонентами
+    public int GAP = 5;
+    // сигнал расположить компоненты в контейнере
+    public void layoutContainer(Container c)
+    {
+        Component comps[] = c.getComponents();
+        int currentY = GAP;
+        for (Component comp : comps)
         {
-            Component comps[] = c.getComponents();
-            int currentY = GAP;
-            for (Component comp : comps)
-            {
-                // предпочтительный размер компонента
-//                Dimension pref = comp.getPreferredSize();
-                Dimension pref = c.getParent().getSize();
-                // указываем положение компонента на экране
-                comp.setBounds(GAP, currentY,
-                        pref.width - GAP, pref.width/2 - GAP);
-                // промежуток между компонентами
-                currentY += GAP;
-                currentY += pref.width/2;
-            }
+            //Ширина главного контейнера
+            Dimension size = c.getParent().getSize();
+            // предпочтительный размер компонента
+            Dimension pref = comp.getPreferredSize();
+            // указываем положение компонента на экране
+            comp.setBounds(GAP, currentY, size.width - (GAP * 2), pref.height);
+            // промежуток между компонентами
+            currentY += GAP;
+            currentY += pref.height;
         }
+    }
         // эти два метода нам не понадобятся
         public void addLayoutComponent(
                 String name, Component comp) {
